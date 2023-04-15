@@ -16,6 +16,13 @@ sudo docker build -t xlogf:0.3 .
 
 ```
 sudo docker run -it -d -p 53:53/udp -p 80:80 -e REDIS_HOST="172.17.0.1" -e REDIS_PORT=6379 -e LISTEN_DOMAIN="dns.sup0rnm4n.io" -v /home/vagrant/dlogs:/usr/src/app/logs:rw xlogf:0.3
+
+```
+
+　　允许容器网络访问宿主机
+
+```
+sudo iptables -I INPUT -i docker0 -j ACCEPT
 ```
 
 #### 0x3.测试
