@@ -1,0 +1,23 @@
+#redis:
+#  host: 'redis.local'
+#  port: 6379
+
+dnslog:
+#  manage:
+#    - 'xlogf.sup0rnm4n.com' # 管理域名
+#  host: '154.204.55.147'  # 宿主机、管理域名 IP
+#  reserve: # 保留域名, 分配随机 IP
+#    - 'www.sup0rnm4n.com'
+#    - 'ldap.sup0rnm4n.com'  # ldap 域名
+#    - 'ns1.sup0rnm4n.com'
+#    - 'ns2.sup0rnm4n.com'
+#  mapping:
+#    - 'ldap.sup0rnm4n.com:154.204.55.147'
+#    - 'www.sup0rnm4n.com:154.201.51.175'  # fake
+#    - 'ns1.sup0rnm4n.com:154.202.52.14'
+#    - 'ns2.sup0rnm4n.com:154.202.52.14'
+#    - 'dashboard.sup0rnm4n.com:154.201.51.175'  # fake
+  update_interval: 30  # 30 秒更新一次临时域名和永久域名
+  support_types:
+    - 'A'
+    # - 'AAAA'
